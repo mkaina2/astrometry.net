@@ -19,7 +19,7 @@ WCS2KML = '/usr/local/wcs2kml/bin/wcs2kml'
 
 ENABLE_SOCIAL = False
 ENABLE_SOCIAL2 = True
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
+
 os.environ['MPLCONFIGDIR'] = '/home/nova/.config/matplotlib'
 
 INSTALLED_APPS += SOCIAL_INSTALLED_APPS 
@@ -29,9 +29,11 @@ TEMPLATES[0]['OPTIONS']['context_processors'].extend(SOCIAL_TEMPLATE_CONTEXT_PRO
 USE_X_FORWARDED_HOST = True
 
 TEMPDIR = '/tmp/astrometry'
+DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+DATABASES['default']['HOST'] = 'localhost'
 DATABASES['default']['NAME'] = 'astrometry'
-DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
-DATABASES['default']['NAME'] = 'django.sqlite3'
+DATABASES['default']['PASSWORD'] = 'astrometry'
+DATABASES['default']['USER'] = 'astrometry'
 
 
 LOGGING['loggers']['django.request']['level'] = 'WARN'

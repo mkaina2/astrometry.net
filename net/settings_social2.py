@@ -32,7 +32,7 @@ SOCIAL_TEMPLATE_CONTEXT_PROCESSORS = (
 # SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
 # SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
 
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY    = authsecrets.google.key
