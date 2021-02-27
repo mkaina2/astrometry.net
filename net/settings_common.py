@@ -21,8 +21,8 @@ MULTI_HOSTS = []
 
 WCS2KML = '/usr/local/wcs2kml/bin/wcs2kml'
 
-ENABLE_SOCIAL=False
-ENABLE_SOCIAL2=False
+ENABLE_SOCIAL = False
+ENABLE_SOCIAL2 = False
 
 os.environ['MPLCONFIGDIR'] = '/home/nova/.config/matplotlib'
 
@@ -57,7 +57,7 @@ ssh_solver_config = 'an-test'
 sitename = 'test'
 
 # FIXME
-BASEDIR = '/home/dstn/astrometry/src/'
+BASEDIR = os.path.realpath(os.path.join(os.path.dirname(astrometry.net.__file__), "..", "src"))
 LOG_DIR = BASEDIR + 'astrometry/net/log/'
 ANDIR = BASEDIR + 'astrometry/'
 UTIL_DIR = ANDIR + 'util/'
